@@ -1,7 +1,8 @@
 FROM python:3.7-slim 
 MAINTAINER heroperseus
 
-RUN apt-get install -y wget tzdata \
+RUN apt-get update \
+    && apt-get install -y wget tzdata \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && wget https://github.com/huashengdun/webssh/archive/v1.5.2.tar.gz \
     && tar -zxvf v1.5.2.tar.gz \
