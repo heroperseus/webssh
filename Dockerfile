@@ -1,5 +1,5 @@
 FROM python:3.7-slim 
-MAINTAINER wuchunhuan
+MAINTAINER heroperseus
 
 RUN apt-get install -y wget tzdata \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
